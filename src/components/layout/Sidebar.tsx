@@ -1,22 +1,11 @@
-import {
-  LayoutDashboard,
-  ShoppingBag,
-  SlidersHorizontal,
-  Settings,
-  X,
-} from "lucide-react";
+import { LayoutDashboard, X } from "lucide-react";
 
 type SidebarProps = {
   isOpen: boolean;
   onClose: () => void;
 };
 
-const navItems = [
-  { label: "Dashboard", icon: LayoutDashboard },
-  { label: "Products", icon: ShoppingBag },
-  { label: "Filters", icon: SlidersHorizontal },
-  { label: "Settings", icon: Settings },
-];
+const navItems = [{ label: "Dashboard", icon: LayoutDashboard }];
 
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
   return (

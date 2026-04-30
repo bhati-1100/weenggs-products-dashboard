@@ -8,7 +8,7 @@ import Filters from "../components/product/Filters";
 import ProductCard from "../components/product/ProductCard";
 
 const ProductDetailsModal = lazy(
-  () => import("../components/product/ProductDetailsModal")
+  () => import("../components/product/ProductDetailsModal"),
 );
 
 const Dashboard = () => {
@@ -45,11 +45,10 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold">Products</h2>
       <Filters categories={categories} />
 
       <Spin spinning={loading || fetching} size="large">
-        <div className="grid min-h-[200px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid min-h-50 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {data.length === 0 && !loading ? (
             <div className="col-span-full py-12 text-center text-gray-500">
               No products found for the selected category or filters.

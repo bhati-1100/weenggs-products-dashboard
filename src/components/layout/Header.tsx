@@ -1,4 +1,4 @@
-import { Menu, Search, Bell, UserCircle2 } from "lucide-react";
+import { Menu, UserCircle2 } from "lucide-react";
 
 type HeaderProps = {
   onToggleSidebar: () => void;
@@ -22,24 +22,8 @@ const Header = ({ onToggleSidebar }: HeaderProps) => {
         </h1>
       </div>
 
-      {/* Center Search */}
-      <div className="hidden w-full max-w-md px-6 md:block">
-        <div className="flex items-center rounded-xl border border-gray-200 bg-gray-50 px-3">
-          <Search size={18} className="text-gray-400" />
-          <input
-            type="text"
-            placeholder="Search products..."
-            className="w-full bg-transparent px-3 py-2 text-sm outline-none"
-          />
-        </div>
-      </div>
-
       {/* Right */}
-      <div className="flex items-center gap-3">
-        <button className="rounded-lg p-2 hover:bg-gray-100">
-          <Bell size={20} className="text-gray-600" />
-        </button>
-
+      <div>
         <button className="rounded-full hover:bg-gray-100">
           <UserCircle2 size={34} className="text-gray-700" />
         </button>
