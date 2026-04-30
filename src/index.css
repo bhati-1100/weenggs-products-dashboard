@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Product card carousel — darken dots so they show on light images */
+.product-card-carousel .slick-dots li button {
+  background: rgba(31, 41, 55, 0.45);
+}
+
+.product-card-carousel .slick-dots li.slick-active button {
+  background: #1f2937;
+}
